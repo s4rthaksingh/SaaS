@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}
+My Home
+{% endblock title %}
+
+{% block content %}
+{% include "snippets/welcome-user.html" %}
+<br>
+{{queryset.count}}
+{% endblock content %}
