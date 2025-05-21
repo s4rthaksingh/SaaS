@@ -7,3 +7,6 @@ def home_page_view(request):
     queryset = PageVisit.objects.filter(path=request.path)
     PageVisit.objects.create(path=request.path)
     return render(request,'index.html',context={'queryset':queryset})
+
+def about(request):
+    return home_page_view(request)
